@@ -1,0 +1,49 @@
+Code Syntax / Example,Library,What It Does (In Simple Terms)
+# Define your question or hypothesis,N/A,Start with a clear goal or question you want to answer using data.
+pd.read_csv('filename.csv'),pandas,Reads a CSV file and loads it into a DataFrame.
+pd.read_excel('filename.xlsx'),pandas,Reads an Excel file into a DataFrame.
+pd.read_json('filename.json'),pandas,Reads a JSON file into a DataFrame.
+requests.get(url),requests,Fetches data from a website or API endpoint.
+"BeautifulSoup(html, 'html.parser')",bs4,Parses HTML to scrape data from websites.
+df.head(),pandas,Displays the first 5 rows of the DataFrame.
+df.info(),pandas,Shows data types and non-null counts for each column.
+df.isnull().sum(),pandas,Counts missing values per column.
+df.dropna(),pandas,Drops rows with missing values.
+df.fillna(value),pandas,Fills missing values with a specified value.
+df.duplicated().sum(),pandas,Counts duplicate rows.
+df.drop_duplicates(),pandas,Removes duplicate rows.
+df['col'].astype('int'),pandas,Changes data type of column.
+df.rename(columns={'old': 'new'}),pandas,Renames columns in the DataFrame.
+df['col'].str.strip(),pandas,Removes leading/trailing whitespace from strings.
+df.describe(),pandas,Provides summary statistics for numerical columns.
+df['col'].value_counts(),pandas,Counts frequency of unique values.
+df['col'].unique(),pandas,Returns unique values in a column.
+df.corr(),pandas,Computes correlation between numeric features.
+sns.heatmap(df.corr()),seaborn,Plots correlation heatmap.
+sns.histplot(df['col']),seaborn,Draws histogram of a column.
+"sns.boxplot(x='col', data=df)",seaborn,Draws a boxplot for visualizing distributions.
+"plt.scatter(df['x'], df['y'])",matplotlib,Creates a scatter plot.
+df.groupby('col').mean(),pandas,Groups by column and computes mean for each group.
+df['profit'] = df['gross'] - df['budget'],pandas,Creates a new column by subtracting two columns.
+df['col_binary'] = df['col'] > threshold,pandas,Creates binary features based on condition.
+pd.get_dummies(df['category']),pandas,Creates dummy variables from categorical column.
+df['col'].apply(lambda x: ...),pandas,Applies a custom function to each value in a column.
+from sklearn.model_selection import train_test_split,scikit-learn,Imports method to split data.
+"X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)",scikit-learn,Splits dataset into training and test sets.
+from sklearn.linear_model import LogisticRegression,scikit-learn,Imports logistic regression model.
+model = LogisticRegression(),scikit-learn,Initializes the logistic regression model.
+"model.fit(X_train, y_train)",scikit-learn,Fits the model to training data.
+model.predict(X_test),scikit-learn,Predicts outcomes for test data.
+from sklearn.ensemble import RandomForestClassifier,scikit-learn,Imports Random Forest classifier.
+model = RandomForestClassifier(n_estimators=100),scikit-learn,Initializes Random Forest with 100 trees.
+from sklearn.metrics import accuracy_score,scikit-learn,Imports accuracy score function.
+"accuracy_score(y_test, y_pred)",scikit-learn,Computes the accuracy of model predictions.
+from sklearn.metrics import classification_report,scikit-learn,"Generates precision, recall, f1-score."
+"print(classification_report(y_test, y_pred))",scikit-learn,Prints classification metrics.
+from sklearn.metrics import confusion_matrix,scikit-learn,Imports confusion matrix.
+"confusion_matrix(y_test, y_pred)",scikit-learn,Shows true vs predicted values.
+from sklearn.model_selection import cross_val_score,scikit-learn,Performs cross-validation scoring.
+"cross_val_score(model, X, y, cv=5)",scikit-learn,Performs 5-fold cross-validation.
+import joblib,joblib,Imports joblib for saving/loading models.
+"joblib.dump(model, 'model.pkl')",joblib,Saves the trained model.
+model = joblib.load('model.pkl'),joblib,Loads a previously saved model.
